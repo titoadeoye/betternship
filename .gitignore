@@ -1,1 +1,8 @@
-# Betternship
+.DS_Store
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+.env
+build.zip
