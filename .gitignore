@@ -1,8 +1,12 @@
 .DS_Store
 /node_modules/
+/dist
 
-# React Router
-/.react-router/
-/build/
-.env
-build.zip
+# environment vars
+.env*
+
+# testing
+/coverage
+
+# build
+/build
