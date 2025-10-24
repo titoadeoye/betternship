@@ -7,7 +7,7 @@ const initialState = {
 };
 
 function cartReducer(state, action) {
-  const { action: payload_ } = action;
+  const { payload: payload_ } = action;
   switch (action.type) {
     case 'ADD_ITEM':
       // best case: use id of product
@@ -70,24 +70,24 @@ function App() {
   const [value, setValue] = useState('');
 
   const handleItemAdd = item => {
-    dispatch({ type: 'ADD_ITEM', action: { item } });
+    dispatch({ type: 'ADD_ITEM', payload: { item } });
   };
 
   const handleItemEdit = item => {
-    dispatch({ type: 'EDIT_ITEM', action: { item } });
+    dispatch({ type: 'EDIT_ITEM', payload: { item } });
   };
 
   const handleItemDelete = id => {
-    dispatch({ type: 'DELETE_ITEM', action: { id } });
+    dispatch({ type: 'DELETE_ITEM', payload: { id } });
   };
 
   const handleDiscountUpdate = value => {
-    dispatch({ type: 'UPDATE_DISCOUNT_CODE', action: value });
+    dispatch({ type: 'UPDATE_DISCOUNT_CODE', payload: value });
   };
 
   const resetDiscountUpdate = () => {
     setValue('');
-    dispatch({ type: 'UPDATE_DISCOUNT_CODE', action: '' });
+    dispatch({ type: 'UPDATE_DISCOUNT_CODE', payload: '' });
   };
 
   const totalPrice = useMemo(() => {
