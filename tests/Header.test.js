@@ -11,3 +11,10 @@ test('renders products', () => {
   expect(penElement).toBeInTheDocument();
   expect(backpackElement).toBeInTheDocument();
 });
+
+// TEST CASE SUGGESTIONS
+// test add to cart button click event
+// test add to cart button updates cart items correctly
+// test quantity increment when adding the same product again
+// test discount code (SAVE10) reduces total price by 10%
+// test invalid discount code does not alter total

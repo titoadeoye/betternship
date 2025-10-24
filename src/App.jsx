@@ -73,14 +73,6 @@ function App() {
     dispatch({ type: 'ADD_ITEM', payload: { item } });
   };
 
-  const handleItemEdit = item => {
-    dispatch({ type: 'EDIT_ITEM', payload: { item } });
-  };
-
-  const handleItemDelete = id => {
-    dispatch({ type: 'DELETE_ITEM', payload: { id } });
-  };
-
   const handleDiscountUpdate = value => {
     dispatch({ type: 'UPDATE_DISCOUNT_CODE', payload: value });
   };
