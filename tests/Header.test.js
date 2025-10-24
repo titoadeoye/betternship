@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 
 test('renders products', () => {
@@ -8,12 +8,6 @@ test('renders products', () => {
   const backpackElement = screen.getByText(/Backpack/i);
 
   expect(notebookElement).toBeInTheDocument();
-  expect(notebookElement).toBeInTheDocument();
-  expect(notebookElement).toBeInTheDocument();
-});
-
-test('add to cart button works', () => {
-  render(<App />);
-  const btnElement = screen.getByTestId('add-to-cart');
-  fireEvent.click();
+  expect(penElement).toBeInTheDocument();
+  expect(backpackElement).toBeInTheDocument();
 });

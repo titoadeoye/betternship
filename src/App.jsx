@@ -35,7 +35,7 @@ function cartReducer(state, action) {
     case 'DELETE_ITEM':
       return {
         ...state,
-        cart: state.cart.filter(item => item?.id === payload_?.id),
+        cart: state.cart.filter(item => item?.id !== payload_?.id),
       };
     case 'UPDATE_DISCOUNT_CODE':
       return {
@@ -86,6 +86,7 @@ function App() {
   };
 
   const resetDiscountUpdate = () => {
+    setValue('');
     dispatch({ type: 'UPDATE_DISCOUNT_CODE', action: '' });
   };
 
@@ -140,7 +141,7 @@ function App() {
             onChange={e => setValue(e.target.value)}
           />
           <button type="submit">Apply</button>
-          <button type="text" onclick={resetDiscountUpdate}>
+          <button type="text" onClick={resetDiscountUpdate}>
             Reset
           </button>
         </form>
