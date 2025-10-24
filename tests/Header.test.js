@@ -1,8 +1,19 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from '../src/App';
 
-test('renders the header with the correct label', () => {
+test('renders products', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Vite \+ React/i);
-  expect(headerElement).toBeInTheDocument();
+  const notebookElement = screen.getByText(/Notebook/i);
+  const penElement = screen.getByText(/Pen/i);
+  const backpackElement = screen.getByText(/Backpack/i);
+
+  expect(notebookElement).toBeInTheDocument();
+  expect(notebookElement).toBeInTheDocument();
+  expect(notebookElement).toBeInTheDocument();
+});
+
+test('add to cart button works', () => {
+  render(<App />);
+  const btnElement = screen.getByTestId('add-to-cart');
+  fireEvent.click();
 });
